@@ -1,0 +1,72 @@
+
+[2010-01-15]
+	ported on Eclipse 3.5 SR1 (Galileo), with CDT 6.0
+	
+[2009-08-22]
+
+- C/C++ linker options added
+	--Xlinker --print-gc-sections
+	--Xlinker --print-map
+	--Xlinker --cref
+	
+- C/C++ compiler options added
+	-fno-inline-functions
+	
+- C++ compiler options added
+	-Wabi
+	-Weffc++
+	
+- C/C++ compiler optimization default to -Os instead of -O3
+
+- Browse type 'file' removed from Map Filename, since it is not properly rendered
+
+	
+[2009-08-21]
+
+- patches from Freddie Chopin applied
+	- C/C++ linker --gc-sections added
+	- C/C++ linker -nostartfiles enabled for C, disabled for C++
+	- C/C++ linker -nostdlibs disabled
+	- C++ compiler -no-rtti option added
+	- C/C++ compiler signed char as option, default is unsigned (compiler default)
+	
+- experimental toolchain presence support not completed, 
+temporarily disabled until properly implemented 
+	
+
+[2009-04-18]
+
+- '-nostdlib' enabled by default for linkers
+
+- 'CodeSourcery G++ Lite' for Windows toolchain presence tested (by 
+attempting to execute 'arm-none-eabi-gcc') [experimental]
+
+- 'CodeSourcery G++ Lite' for Linux toolchain presence tested (by 
+attempting to execute 'arm-none-linux-gnueabi-gcc') [experimental]
+
+- 'GNUARM' (and derivatives) toolchain presence tested (by 
+attempting to execute 'arm-elf-gcc') [experimental]
+
+- PATH automatic discovery for Windows versions of 'CodeSourcery G++ Lite'
+and 'GNUARM 4.1.1', by using Windows Registry information. No need to have 
+them in the system PATH.
+
+[2009-04-07]
+
+- C Linker empty makefile bug fixed (spaces in secondaryOutputs/targetTool)
+
+- about.* files moved here from the feature project; the ARM icon is now
+visible in the Help -> About window.
+
+- update site URL renamed from http://gnuarmeclipse.sourceforge.net/update
+to http://gnuarmeclipse.sourceforge.net/updates
+
+
+[2009-04-03]
+
+- org.eclipse.cdt.core.templateAssociations (schema in org.eclipse.cdt.core)
+points to all toolchain bases, as specified in schema examples and used in
+org.eclipse.cdt.managebuilder.gnu.ui. (not yet functional)
+
+
+
