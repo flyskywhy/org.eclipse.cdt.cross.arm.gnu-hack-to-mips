@@ -80,7 +80,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.c"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-none-linux-gnueabi-gcc">
+               command="mips-sde-elf-gcc">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -106,7 +106,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-none-linux-gnueabi-g++">
+               command="mips-sde-elf-g++">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -126,7 +126,7 @@
       </buildOutputProvider>
       <scannerInfoProvider providerId="specsFile">
          <run
-               command="arm-none-linux-gnueabi-gcc"
+               command="mips-sde-elf-gcc"
                arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"/>
          <scannerInfoConsoleParser class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser"/>
@@ -656,314 +656,27 @@
          </option>
          <option
                id="org.eclipse.cdt.cross.arm.gnu.base.option.processor"
-               name="Processor (-mcpu)"
+               name="Processor (-march)"
                valueType="enumerated">
             <enumeratedOptionValue
-                  command="-mcpu=arm2"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm2"
-                  name="arm2">
+                  command="-march=4kc"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.march.4kc"
+                  name="4kc">
             </enumeratedOptionValue>
             <enumeratedOptionValue
-                  command="-mcpu=arm250"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm250"
-                  name="arm250">
+                  command="-march=34kc"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.march.34kc"
+                  name="34kc">
             </enumeratedOptionValue>
             <enumeratedOptionValue
-                  command="-mcpu=arm3"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm3"
-                  name="arm3">
+                  command="-march=34kf"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.march.34kf"
+                  name="34Kf (half-speed FPU)">
             </enumeratedOptionValue>
             <enumeratedOptionValue
-                  command="-mcpu=arm6"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm6"
-                  name="arm6">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm60"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm60"
-                  name="arm60">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm600"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm600"
-                  name="arm600">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm610"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm610"
-                  name="arm610">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm620"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm620"
-                  name="arm620">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7"
-                  name="arm7">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7m"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7m"
-                  name="arm7m">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7d"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7d"
-                  name="arm7d">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7dm"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7dm"
-                  name="arm7dm">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7di"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7di"
-                  name="arm7di">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7dmi"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7dmi"
-                  name="arm7dmi">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm70"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm70"
-                  name="arm70">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm700"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm700"
-                  name="arm700">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm700i"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm700i"
-                  name="arm700i">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm710"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm710"
-                  name="arm710">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm710c"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm710c"
-                  name="arm710c">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7100"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7100"
-                  name="arm7100">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7500"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7500"
-                  name="arm7500">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7500fe"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7500fe"
-                  name="arm7500fe">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7tdmi"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7tdmi"
-                  isDefault="false"
-                  name="arm7tdmi">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm7tdmi-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm7tdmi-s"
-                  name="arm7tdmi-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm8"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm8"
-                  name="arm8">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=strongarm"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.strongarm"
-                  name="strongarm">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=strongarm110"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.strongarm110"
-                  name="strongarm110">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=strongarm1100"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.strongarm1100"
-                  name="strongarm1100">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm8"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm8"
-                  name="arm8">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm810"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm810"
-                  name="arm810">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm9"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm9"
-                  name="arm9">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm9e"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm9e"
-                  name="arm9e">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm920"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm920"
-                  name="arm920">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm920t"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm920t"
-                  name="arm920t">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm922t"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm922t"
-                  name="arm922t">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm946e-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm946e-s"
-                  name="arm946e-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm966e-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm966e-s"
-                  name="arm966e-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm968e-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm968e-s"
-                  name="arm968e-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm926ej-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm926ej-s"
-                  name="arm926ej-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm940t"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm940t"
-                  name="arm940t">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm9tdmi"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm9tdmi"
-                  name="arm9tdmi">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm10tdmi"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm10tdmi"
-                  name="arm10tdmi">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1020t"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1020t"
-                  name="arm1020t">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1026ej-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1026ej-s"
-                  name="arm1026ej-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm10e"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm10e"
-                  name="arm10e">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1020e"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1020e"
-                  name="arm1020e">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1022e"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1022e"
-                  name="arm1022e">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1136j-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1136j-s"
-                  name="arm1136j-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1136jf-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1136jf-s"
-                  name="arm1136jf-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=mpcore"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.mpcore"
-                  name="mpcore">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=mpcorenovfp"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.mpcorenovfp"
-                  name="mpcorenovfp">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1156t2-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1156t2-s"
-                  name="arm1156t2-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1176jz-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1176jz-s"
-                  name="arm1176jz-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=arm1176jzf-s"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.arm1176jzf-s"
-                  name="arm1176jzf-s">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=cortex-a8"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.cortex-a8"
-                  name="cortex-a8">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=cortex-r4"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.cortex-r4"
-                  name="cortex-r4">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=cortex-r4f"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.cortex-r4f"
-                  name="cortex-r4f">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=cortex-m3"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.cortex-m3"
-                  isDefault="true"
-                  name="cortex-m3">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=xscale"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.xscale"
-                  name="xscale">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=iwmmxt"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.iwmmxt"
-                  name="iwmmxt">
-            </enumeratedOptionValue>
-            <enumeratedOptionValue
-                  command="-mcpu=ep9312"
-                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcpu.ep9312"
-                  name="ep9312">
+                  command="-march=34kx"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.march.34kx"
+                  name="34Kf (full-speed FPU)">
             </enumeratedOptionValue>
          </option>
          <option
@@ -1062,18 +775,51 @@
             </enablement>
          </option>
          <option
-               command="-mthumb"
+               command="-EL"
                defaultValue="true"
                id="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumb"
-               name="Thumb (-mthumb)"
+               name="Little-endian (-EL)"
                valueType="boolean">
          </option>
          <option
-               command="-mthumb-interwork"
-               defaultValue="false"
-               id="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumbinterwork"
-               name="Thumb interwork (-mthumb-interwork)"
-               valueType="boolean">
+               id="org.eclipse.cdt.cross.arm.gnu.base.option.target.float"
+               name="Floating Point"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-msoft-float"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.float.soft"
+                  name="Software">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-mhard-float"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.float.hard"
+                  name="Hardware">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-mno-float"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.float.no"
+                  name="No Float">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.arm.gnu.base.option.target.mcode-readable"
+               name="Code Readable"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-mcode-readable=yes"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcode-readable.mcode-readable=yes"
+                  name="Code Readable">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-mcode-readable=no"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcode-readable.mcode-readable=no"
+                  name="Not Code Readable">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-mcode-readable=pcrel"
+                  id="org.eclipse.cdt.cross.arm.gnu.base.option.mcode-readable.mcode-readable=pcrel"
+                  name="PC Rel Code Readable">
+            </enumeratedOptionValue>
          </option>
          <option
                command="-p"
@@ -1105,7 +851,7 @@
          </option>
          <option
                command="-Wl,-Map,"
-               defaultValue="${BuildArtifactFileBaseName}.map"
+               defaultValue=""
                id="org.eclipse.cdt.cross.arm.gnu.base.option.other.mapfilename"
                name="Map Filename"
                valueType="string">
@@ -1946,6 +1692,7 @@
                browseType="file"
                category="org.eclipse.cdt.cross.arm.gnu.c.link.category.general"
                command="-T&quot;${VALUE}&quot;"
+               defaultValue="sdemdi32.ld"
                id="org.eclipse.cdt.cross.arm.gnu.c.link.option.scriptfile"
                isAbstract="false"
                name="Script file (-T)"
@@ -1955,7 +1702,7 @@
          <option
                category="org.eclipse.cdt.cross.arm.gnu.c.link.category.general"
                command="-nostartfiles"
-               defaultValue="true"
+               defaultValue="false"
                id="org.eclipse.cdt.cross.arm.gnu.c.link.option.nostart"
                name="Do not use standard start files (-nostartfiles)"
                valueType="boolean">
@@ -2144,6 +1891,7 @@
                browseType="file"
                category="org.eclipse.cdt.cross.arm.gnu.cpp.link.category.general"
                command="-T&quot;${VALUE}&quot;"
+               defaultValue="sdemdi32.ld"
                id="org.eclipse.cdt.cross.arm.gnu.cpp.link.option.scriptfile"
                isAbstract="false"
                name="Script file (-T)"
@@ -2810,14 +2558,20 @@
          <option
                category="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.category.target"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.target.thumb"
-               name="Thumb (-mthumb)"
+               name="Little-endian (-EL)"
                superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumb">
          </option>
          <option
                category="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.category.target"
-               id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.target.thumbinterwork"
-               name="Thumb interwork (-mthumb-interwork)"
-               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumbinterwork">
+               id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.target.float"
+               name="Floating Point"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.float">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.category.target"
+               id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.target.mcode-readable"
+               name="Code Readable"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.mcode-readable">
          </option>
          <optionCategory
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.category.debugging"
@@ -3231,7 +2985,7 @@
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.toolchain.base"
                   isAbstract="false"
                   isToolChainSupported="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.IsToolChainSupported"
-                  name="ARM Linux GCC (Sourcery G++ Lite)"
+                  name="MIPS Linux Bare-iron GCC (Sourcery G++ Lite)"
                   osList="linux">
          <targetPlatform
                archList="all"
@@ -3262,14 +3016,20 @@
          <option
                category="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.category.target"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.option.target.thumb"
-               name="Thumb (-mthumb)"
+               name="Little-endian (-EL)"
                superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumb">
          </option>
          <option
                category="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.category.target"
-               id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.option.target.thumbinterwork"
-               name="Thumb interwork (-mthumb-interwork)"
-               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumbinterwork">
+               id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.option.target.float"
+               name="Floating Point"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.float">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.category.target"
+               id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.option.target.mcode-readable"
+               name="Code Readable"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.mcode-readable">
          </option>
          <optionCategory
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.category.debugging"
@@ -3336,10 +3096,10 @@
                superClass="org.eclipse.cdt.cross.arm.gnu.base.option.addtools.printsize">
          </option>
          <tool
-               command="arm-none-linux-gnueabi-gcc"
+               command="mips-sde-elf-gcc"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GCC Assembler"
+               name="MIPS Sourcery Linux Bare-iron GCC Assembler"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.assembler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input"
@@ -3348,10 +3108,10 @@
             </inputType>
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-gcc"
+               command="mips-sde-elf-gcc"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.compiler.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GCC C Compiler"
+               name="MIPS Sourcery Linux Bare-iron GCC C Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.c.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.compiler.base.input"
@@ -3360,10 +3120,10 @@
             </inputType>
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-g++"
+               command="mips-sde-elf-g++"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.cpp.compiler.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GCC C++ Compiler"
+               name="MIPS Sourcery Linux Bare-iron GCC C++ Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.cpp.compiler.base.input"
@@ -3372,31 +3132,31 @@
             </inputType>
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-gcc"
+               command="mips-sde-elf-gcc"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.linker.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GCC C Linker"
+               name="MIPS Sourcery Linux Bare-iron GCC C Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.c.linker">
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-g++"
+               command="mips-sde-elf-g++"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.cpp.linker.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GCC C++ Linker"
+               name="MIPS Sourcery Linux Bare-iron GCC C++ Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.linker">
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-ar"
+               command="mips-sde-elf-ar"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.archiver.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GCC Archiver"
+               name="MIPS Sourcery Linux Bare-iron GCC Archiver"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.archiver">
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-objcopy"
+               command="mips-sde-elf-objcopy"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.createflash.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GNU Create Flash Image"
+               name="MIPS Sourcery Linux Bare-iron Create Flash Image"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.createflash">
             <enablement
                   type="ALL">
@@ -3414,10 +3174,10 @@
             </enablement>
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-objdump"
+               command="mips-sde-elf-objdump"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.createlisting.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GNU Create Listing"
+               name="MIPS Sourcery Linux Bare-iron Create Listing"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.createlisting">
             <enablement
                   type="ALL">
@@ -3435,10 +3195,10 @@
             </enablement>
          </tool>
          <tool
-               command="arm-none-linux-gnueabi-size"
+               command="mips-sde-elf-size"
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.printsize.base"
                isAbstract="false"
-               name="ARM Sourcery Linux GNU Print Size"
+               name="MIPS Sourcery Linux Bare-iron Print Size"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.printsize">
             <enablement
                   type="ALL">
@@ -3724,14 +3484,20 @@
          <option
                category="org.eclipse.cdt.cross.arm.gnu.windows.category.target"
                id="org.eclipse.cdt.cross.arm.gnu.windows.option.target.thumb"
-               name="Thumb (-mthumb)"
+               name="Little-endian (-EL)"
                superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumb">
          </option>
          <option
                category="org.eclipse.cdt.cross.arm.gnu.windows.category.target"
-               id="org.eclipse.cdt.cross.arm.gnu.windows.option.target.thumbinterwork"
-               name="Thumb interwork (-mthumb-interwork)"
-               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumbinterwork">
+               id="org.eclipse.cdt.cross.arm.gnu.windows.option.target.float"
+               name="Floating Point"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.float">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.arm.gnu.windows.category.target"
+               id="org.eclipse.cdt.cross.arm.gnu.windows.option.target.mcode-readable"
+               name="Code Readable"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.mcode-readable">
          </option>
          <optionCategory
                id="org.eclipse.cdt.cross.arm.gnu.windows.category.debugging"
@@ -4176,14 +3942,20 @@
          <option
                category="org.eclipse.cdt.cross.arm.gnu.linux.category.target"
                id="org.eclipse.cdt.cross.arm.gnu.linux.option.target.thumb"
-               name="Thumb (-mthumb)"
+               name="Little-endian (-EL)"
                superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumb">
          </option>
          <option
                category="org.eclipse.cdt.cross.arm.gnu.linux.category.target"
-               id="org.eclipse.cdt.cross.arm.gnu.linux.option.target.thumbinterwork"
-               name="Thumb interwork (-mthumb-interwork)"
-               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumbinterwork">
+               id="org.eclipse.cdt.cross.arm.gnu.linux.option.target.float"
+               name="Floating Point"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.float">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.arm.gnu.linux.category.target"
+               id="org.eclipse.cdt.cross.arm.gnu.linux.option.target.mcode-readable"
+               name="Code Readable"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.mcode-readable">
          </option>
          <optionCategory
                id="org.eclipse.cdt.cross.arm.gnu.linux.category.debugging"
@@ -4628,14 +4400,20 @@
          <option
                category="org.eclipse.cdt.cross.arm.gnu.macosx.category.target"
                id="org.eclipse.cdt.cross.arm.gnu.macosx.option.target.thumb"
-               name="Thumb (-mthumb)"
+               name="Little-endian (-EL)"
                superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumb">
          </option>
          <option
                category="org.eclipse.cdt.cross.arm.gnu.macosx.category.target"
-               id="org.eclipse.cdt.cross.arm.gnu.macosx.option.target.thumbinterwork"
-               name="Thumb interwork (-mthumb-interwork)"
-               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.thumbinterwork">
+               id="org.eclipse.cdt.cross.arm.gnu.macosx.option.target.float"
+               name="Floating Point"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.float">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.arm.gnu.macosx.category.target"
+               id="org.eclipse.cdt.cross.arm.gnu.macosx.option.target.mcode-readable"
+               name="Code Readable"
+               superClass="org.eclipse.cdt.cross.arm.gnu.base.option.target.mcode-readable">
          </option>
          <optionCategory
                id="org.eclipse.cdt.cross.arm.gnu.macosx.category.debugging"
