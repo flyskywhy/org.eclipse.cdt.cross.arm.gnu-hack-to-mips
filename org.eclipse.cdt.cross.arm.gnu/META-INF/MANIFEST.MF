@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GNU ARM C/C++ Development Support
 Bundle-SymbolicName: org.eclipse.cdt.cross.arm.gnu;singleton:=true
-Bundle-Version: 0.5.3
+Bundle-Version: 0.5.3.qualifier
 Bundle-Vendor: SourceForge Project
 Require-Bundle: org.eclipse.cdt.managedbuilder.core;bundle-version="5.0.2",
  org.eclipse.cdt.ui;bundle-version="5.0.2",
