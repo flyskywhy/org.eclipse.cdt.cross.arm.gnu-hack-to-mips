@@ -52,12 +52,12 @@
          point="org.eclipse.cdt.managedbuilder.core.buildProperties">
       <propertyValue
             id="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application"
-            name="ARM Cross Target Application"
+            name="MIPS Cross Target Application"
             property="org.eclipse.cdt.build.core.buildArtefactType">
       </propertyValue>
       <propertyValue
             id="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.staticLib"
-            name="ARM Cross Target Static Library"
+            name="MIPS Cross Target Static Library"
             property="org.eclipse.cdt.build.core.buildArtefactType">
       </propertyValue>
    </extension>
@@ -661,12 +661,12 @@
             <enumeratedOptionValue
                   command="-march=4kc"
                   id="org.eclipse.cdt.cross.arm.gnu.base.option.march.4kc"
-                  name="4kc">
+                  name="4Kc">
             </enumeratedOptionValue>
             <enumeratedOptionValue
                   command="-march=34kc"
                   id="org.eclipse.cdt.cross.arm.gnu.base.option.march.34kc"
-                  name="34kc">
+                  name="34Kc">
             </enumeratedOptionValue>
             <enumeratedOptionValue
                   command="-march=34kf"
