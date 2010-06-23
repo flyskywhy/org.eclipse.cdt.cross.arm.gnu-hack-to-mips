@@ -194,7 +194,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.c"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-none-eabi-gcc">
+               command="mips-sde-elf-gcc">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -220,7 +220,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-none-eabi-g++">
+               command="mips-sde-elf-g++">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -246,7 +246,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-none-eabi-gcc">
+               command="mips-sde-elf-gcc">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -2378,63 +2378,63 @@
             superClass="org.eclipse.cdt.cross.arm.gnu.builder">
       </builder>
       <tool
-            command="arm-none-eabi-gcc"
+            command="mips-sde-elf-gcc"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.assembler"
             isAbstract="false"
             name="ARM Sourcery GCC Assembler"
             superClass="org.eclipse.cdt.cross.arm.gnu.assembler">
       </tool>
       <tool
-            command="arm-none-eabi-gcc"
+            command="mips-sde-elf-gcc"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.c.compiler"
             isAbstract="false"
             name="ARM Sourcery GCC C Compiler"
             superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler">
       </tool>
       <tool
-            command="arm-none-eabi-g++"
+            command="mips-sde-elf-g++"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.compiler"
             isAbstract="false"
             name="ARM Sourcery GCC C++ Compiler"
             superClass="org.eclipse.cdt.cross.arm.gnu.cpp.compiler">
       </tool>
       <tool
-            command="arm-none-eabi-gcc"
+            command="mips-sde-elf-gcc"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.c.linker"
             isAbstract="false"
             name="ARM Sourcery GCC C Linker"
             superClass="org.eclipse.cdt.cross.arm.gnu.c.linker">
       </tool>
       <tool
-            command="arm-none-eabi-g++"
+            command="mips-sde-elf-g++"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.linker"
             isAbstract="false"
             name="ARM Sourcery GCC C++ Linker"
             superClass="org.eclipse.cdt.cross.arm.gnu.cpp.linker">
       </tool>
       <tool
-            command="arm-none-eabi-ar"
+            command="mips-sde-elf-ar"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.archiver"
             isAbstract="false"
             name="ARM Sourcery GCC Archiver"
             superClass="org.eclipse.cdt.cross.arm.gnu.archiver">
       </tool>
       <tool
-            command="arm-none-eabi-objcopy"
+            command="mips-sde-elf-objcopy"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.createflash"
             isAbstract="false"
-            name="ARM Sourcery GNU Create Flash Image"
+            name="MIPS Sourcery GNU Create Flash Image"
             superClass="org.eclipse.cdt.cross.arm.gnu.createflash">
       </tool>
       <tool
-            command="arm-none-eabi-objdump"
+            command="mips-sde-elf-objdump"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.createlisting"
             isAbstract="false"
             name="ARM Sourcery GNU Create Listing"
             superClass="org.eclipse.cdt.cross.arm.gnu.createlisting">
       </tool>
       <tool
-            command="arm-none-eabi-size"
+            command="mips-sde-elf-size"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.printsize"
             isAbstract="false"
             name="ARM Sourcery GNU Print Size"
@@ -2527,7 +2527,7 @@
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.toolchain.base"
             isAbstract="false"
             isToolChainSupported="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.IsToolChainSupported"
-            name="ARM Windows GCC (Sourcery G++ Lite)"
+            name="MIPS Windows Bare-iron GCC (Sourcery G++ Lite)"
             osList="win32">
          <targetPlatform
                archList="all"
@@ -2641,7 +2641,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.assembler.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GCC Assembler"
+               name="MIPS Sourcery Windows Bare-iron GCC Assembler"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.assembler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.assembler.base.input"
@@ -2652,7 +2652,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.c.compiler.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GCC C Compiler"
+               name="MIPS Sourcery Windows Bare-iron GCC C Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.c.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.c.compiler.base.input"
@@ -2663,7 +2663,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.cpp.compiler.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GCC C++ Compiler"
+               name="MIPS Sourcery Windows Bare-iron GCC C++ Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.cpp.compiler.base.input"
@@ -2674,25 +2674,25 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.c.linker.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GCC C Linker"
+               name="MIPS Sourcery Windows Bare-iron GCC C Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.c.linker">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.cpp.linker.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GCC C++ Linker"
+               name="MIPS Sourcery Windows Bare-iron GCC C++ Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.linker">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.archiver.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GCC Archiver"
+               name="MIPS Sourcery Windows Bare-iron GCC Archiver"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.archiver">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.createflash.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GNU Create Flash Image"
+               name="MIPS Sourcery Windows Bare-iron Create Flash Image"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.createflash">
             <enablement
                   type="ALL">
@@ -2712,7 +2712,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.createlisting.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GNU Create Listing"
+               name="MIPS Sourcery Windows Bare-iron Create Listing"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.createlisting">
             <enablement
                   type="ALL">
@@ -2732,7 +2732,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.printsize.base"
                isAbstract="false"
-               name="ARM Sourcery Windows GNU Print Size"
+               name="MIPS Sourcery Windows Bare-iron Print Size"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.printsize">
             <enablement
                   type="ALL">

@@ -25,7 +25,7 @@ public class IsToolChainSupported extends
 	}
 	
 	public String getCompilerName() {
-		return "arm-none-eabi-gcc";
+		return "mips-sde-elf-gcc";
 	}
 
 	public String getPlatform() {
