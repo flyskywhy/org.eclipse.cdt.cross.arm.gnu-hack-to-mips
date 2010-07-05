@@ -63,7 +63,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCManagedMakePerProjectProfileC"
-         name="ARM CodeSourcery GNU C/C++ managed make per project SCD profile"
+         name="MIPS CodeSourcery GNU C/C++ managed make per project SCD profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGCCScannerInfoCollector"
@@ -89,7 +89,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCManagedMakePerProjectProfileCPP"
-         name="ARM CodeSourcery GNU C/C++ managed make per project SCD profile"
+         name="MIPS CodeSourcery GNU C/C++ managed make per project SCD profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGCCScannerInfoCollector"
@@ -115,7 +115,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCStandardMakePerProjectProfile"
-         name="ARM CodeSourcery GNU C/C++ Scanner Info per project profile"
+         name="MIPS CodeSourcery GNU C/C++ Scanner Info per project profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerProjectSICollector"
@@ -135,7 +135,7 @@
    
    <extension
          id="ARM_CS_GCCStandardMakePerFileProfile"
-         name="ARM CodeSourcery GNU C/C++ Scanner Info per file profile"
+         name="MIPS CodeSourcery GNU C/C++ Scanner Info per file profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerFileSICollector"
@@ -177,7 +177,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCWinManagedMakePerProjectProfileC"
-         name="ARM CodeSourcery GNU C/C++ managed make per project SCD profile (Windows)"
+         name="MIPS CodeSourcery GNU C/C++ managed make per project SCD profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGnuWinScannerInfoCollector"
@@ -203,7 +203,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCWinManagedMakePerProjectProfileCPP"
-         name="ARM CodeSourcery GNU C/C++ managed make per project SCD profile (Windows)"
+         name="MIPS CodeSourcery GNU C/C++ managed make per project SCD profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGnuWinScannerInfoCollector"
@@ -229,7 +229,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCWinStandardMakePerProjectProfile"
-         name="ARM CodeSourcery GNU C/C++ Scanner Info per project profile (Windows)"
+         name="MIPS CodeSourcery GNU C/C++ Scanner Info per project profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerProjectSICollector"
@@ -255,7 +255,7 @@
    </extension>
    <extension
          id="ARM_CS_GCCWinStandardMakePerFileProfile"
-         name="ARM CodeSourcery GNU C/C++ Scanner Info per file profile (Windows)"
+         name="MIPS CodeSourcery GNU C/C++ Scanner Info per file profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerFileSICollector"
@@ -305,7 +305,7 @@
 
    <extension
          id="ARM_GCCManagedMakePerProjectProfileC"
-         name="ARM GNU C/C++ managed make per project SCD profile"
+         name="MIPS GNU C/C++ managed make per project SCD profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGCCScannerInfoCollector"
@@ -322,7 +322,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.c"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-elf-gcc">
+               command="mips-linux-gnu-gcc">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -331,7 +331,7 @@
    </extension>
    <extension
          id="ARM_GCCManagedMakePerProjectProfileCPP"
-         name="ARM GNU C/C++ managed make per project SCD profile"
+         name="MIPS GNU C/C++ managed make per project SCD profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGCCScannerInfoCollector"
@@ -348,7 +348,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-elf-g++">
+               command="mips-linux-gnu-g++">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -357,7 +357,7 @@
    </extension>
    <extension
          id="ARM_GCCStandardMakePerProjectProfile"
-         name="ARM GNU C/C++ Scanner Info per project profile"
+         name="MIPS GNU C/C++ Scanner Info per project profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerProjectSICollector"
@@ -368,7 +368,7 @@
       </buildOutputProvider>
       <scannerInfoProvider providerId="specsFile">
          <run
-               command="arm-elf-gcc"
+               command="mips-linux-gnu-gcc"
                arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"/>
          <scannerInfoConsoleParser class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser"/>
@@ -377,7 +377,7 @@
    
    <extension
          id="ARM_GCCStandardMakePerFileProfile"
-         name="ARM GNU C/C++ Scanner Info per file profile"
+         name="MIPS GNU C/C++ Scanner Info per file profile"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerFileSICollector"
@@ -419,7 +419,7 @@
    </extension>
    <extension
          id="ARM_GCCWinManagedMakePerProjectProfileC"
-         name="ARM GNU C/C++ managed make per project SCD profile (Windows)"
+         name="MIPS GNU C/C++ managed make per project SCD profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGnuWinScannerInfoCollector"
@@ -436,7 +436,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.c"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-elf-gcc">
+               command="mips-linux-gnu-gcc">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -445,7 +445,7 @@
    </extension>
    <extension
          id="ARM_GCCWinManagedMakePerProjectProfileCPP"
-         name="ARM GNU C/C++ managed make per project SCD profile (Windows)"
+         name="MIPS GNU C/C++ managed make per project SCD profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.cross.arm.gnu.scannerconfig.ARMGnuWinScannerInfoCollector"
@@ -462,7 +462,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-elf-g++">
+               command="mips-linux-gnu-g++">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -471,7 +471,7 @@
    </extension>
    <extension
          id="ARM_GCCWinStandardMakePerProjectProfile"
-         name="ARM GNU C/C++ Scanner Info per project profile (Windows)"
+         name="MIPS GNU C/C++ Scanner Info per project profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerProjectSICollector"
@@ -488,7 +488,7 @@
          <run
                arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
-               command="arm-elf-gcc">
+               command="mips-linux-gnu-gcc">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
@@ -497,7 +497,7 @@
    </extension>
    <extension
          id="ARM_GCCWinStandardMakePerFileProfile"
-         name="ARM GNU C/C++ Scanner Info per file profile (Windows)"
+         name="MIPS GNU C/C++ Scanner Info per file profile (Windows)"
          point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
       <scannerInfoCollector
             class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerFileSICollector"
@@ -514,7 +514,7 @@
          <run
                arguments="-f ${project_name}_scd.mk"
                class="org.eclipse.cdt.make.internal.core.scannerconfig2.SCDMakefileGenerator"
-               command="make">
+               command="cs-make">
          </run>
          <scannerInfoConsoleParser
                class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCPerFileSIPConsoleParser">
@@ -867,16 +867,16 @@
             id="org.eclipse.cdt.cross.arm.gnu.builder"
             isAbstract="false"
             isVariableCaseSensitive="false"
-            name="ARM GNU Make builder"
+            name="MIPS GNU Make builder"
             superClass="cdt.managedbuild.target.gnu.builder">
       </builder>
       <tool
-            command="arm-elf-gcc"
+            command="mips-linux-gnu-gcc"
             commandLineGenerator="org.eclipse.cdt.cross.arm.gnu.ARMManagedCommandLineGenerator"
             errorParsers="org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser"
             id="org.eclipse.cdt.cross.arm.gnu.assembler"
             isAbstract="false"
-            name="ARM GCC Assembler"
+            name="MIPS GCC Assembler"
             natureFilter="both"
             outputFlag="-o">
          <supportedProperties>
@@ -1062,12 +1062,12 @@
          </outputType>
       </tool>
       <tool
-            command="arm-elf-gcc"
+            command="mips-linux-gnu-gcc"
             commandLineGenerator="org.eclipse.cdt.cross.arm.gnu.ARMManagedCommandLineGenerator"
             errorParsers="org.eclipse.cdt.core.GCCErrorParser"
             id="org.eclipse.cdt.cross.arm.gnu.c.compiler"
             isAbstract="false"
-            name="ARM GCC C Compiler"
+            name="MIPS GCC C Compiler"
             natureFilter="both"
             outputFlag="-o">
          <supportedProperties>
@@ -1343,12 +1343,12 @@
          </outputType>
       </tool>
       <tool
-            command="arm-elf-g++"
+            command="mips-linux-gnu-g++"
             commandLineGenerator="org.eclipse.cdt.cross.arm.gnu.ARMManagedCommandLineGenerator"
             errorParsers="org.eclipse.cdt.core.GCCErrorParser"
             id="org.eclipse.cdt.cross.arm.gnu.cpp.compiler"
             isAbstract="false"
-            name="ARM GCC C++ Compiler"
+            name="MIPS GCC C++ Compiler"
             natureFilter="ccnature"
             outputFlag="-o">
          <supportedProperties>
@@ -1656,12 +1656,12 @@
          </outputType>
       </tool>
       <tool
-            command="arm-elf-gcc"
+            command="mips-linux-gnu-gcc"
             commandLineGenerator="org.eclipse.cdt.cross.arm.gnu.ARMManagedCommandLineGenerator"
             errorParsers="org.eclipse.cdt.core.GLDErrorParser"
             id="org.eclipse.cdt.cross.arm.gnu.c.linker"
             isAbstract="false"
-            name="ARM GCC C Linker"
+            name="MIPS GCC C Linker"
             natureFilter="cnature"
             outputFlag="-o">
          <enablement
@@ -1692,7 +1692,7 @@
                browseType="file"
                category="org.eclipse.cdt.cross.arm.gnu.c.link.category.general"
                command="-T&quot;${VALUE}&quot;"
-               defaultValue="sdemdi32.ld"
+               defaultValue=""
                id="org.eclipse.cdt.cross.arm.gnu.c.link.option.scriptfile"
                isAbstract="false"
                name="Script file (-T)"
@@ -1855,12 +1855,12 @@
          </option>
       </tool>
       <tool
-            command="arm-elf-g++"
+            command="mips-linux-gnu-g++"
             commandLineGenerator="org.eclipse.cdt.cross.arm.gnu.ARMManagedCommandLineGenerator"
             errorParsers="org.eclipse.cdt.core.GLDErrorParser"
             id="org.eclipse.cdt.cross.arm.gnu.cpp.linker"
             isAbstract="false"
-            name="ARM GCC C++ Linker"
+            name="MIPS GCC C++ Linker"
             natureFilter="ccnature"
             outputFlag="-o">
          <enablement
@@ -1891,7 +1891,7 @@
                browseType="file"
                category="org.eclipse.cdt.cross.arm.gnu.cpp.link.category.general"
                command="-T&quot;${VALUE}&quot;"
-               defaultValue="sdemdi32.ld"
+               defaultValue=""
                id="org.eclipse.cdt.cross.arm.gnu.cpp.link.option.scriptfile"
                isAbstract="false"
                name="Script file (-T)"
@@ -2054,10 +2054,10 @@
          </option>
       </tool>
       <tool
-            command="arm-elf-ar"
+            command="mips-linux-gnu-ar"
             id="org.eclipse.cdt.cross.arm.gnu.archiver"
             isAbstract="false"
-            name="ARM GCC Archiver"
+            name="MIPS GCC Archiver"
             natureFilter="both">
          <enablement
                type="ALL">
@@ -2119,9 +2119,9 @@
          </outputType>
       </tool>
       <tool
-            command="arm-elf-objcopy"
+            command="mips-linux-gnu-objcopy"
             id="org.eclipse.cdt.cross.arm.gnu.createflash"
-            name="ARM GNU Create Flash Image"
+            name="MIPS GNU Create Flash Image"
             natureFilter="both">
          <enablement
                type="ALL">
@@ -2250,9 +2250,9 @@
          </option>
       </tool>
       <tool
-            command="arm-elf-objdump"
+            command="mips-linux-gnu-objdump"
             id="org.eclipse.cdt.cross.arm.gnu.createlisting"
-            name="ARM GNU Create Listing"
+            name="MIPS GNU Create Listing"
             natureFilter="both"
             outputFlag="&gt;">
          <enablement
@@ -2294,10 +2294,10 @@
          </option>
       </tool>
       <tool
-            command="arm-elf-size"
+            command="mips-linux-gnu-size"
             commandLinePattern="${COMMAND} ${INPUTS} ${FLAGS}"
             id="org.eclipse.cdt.cross.arm.gnu.printsize"
-            name="ARM GNU Print Size"
+            name="MIPS GNU Print Size"
             natureFilter="both">
          <enablement
                type="ALL">
@@ -2374,49 +2374,49 @@
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.builder"
             isAbstract="false"
             isVariableCaseSensitive="false"
-            name="ARM Sourcery GNU Make builder"
+            name="MIPS Sourcery GNU Make builder"
             superClass="org.eclipse.cdt.cross.arm.gnu.builder">
       </builder>
       <tool
             command="mips-sde-elf-gcc"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.assembler"
             isAbstract="false"
-            name="ARM Sourcery GCC Assembler"
+            name="MIPS Sourcery GCC Assembler"
             superClass="org.eclipse.cdt.cross.arm.gnu.assembler">
       </tool>
       <tool
             command="mips-sde-elf-gcc"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.c.compiler"
             isAbstract="false"
-            name="ARM Sourcery GCC C Compiler"
+            name="MIPS Sourcery GCC C Compiler"
             superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler">
       </tool>
       <tool
             command="mips-sde-elf-g++"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.compiler"
             isAbstract="false"
-            name="ARM Sourcery GCC C++ Compiler"
+            name="MIPS Sourcery GCC C++ Compiler"
             superClass="org.eclipse.cdt.cross.arm.gnu.cpp.compiler">
       </tool>
       <tool
             command="mips-sde-elf-gcc"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.c.linker"
             isAbstract="false"
-            name="ARM Sourcery GCC C Linker"
+            name="MIPS Sourcery GCC C Linker"
             superClass="org.eclipse.cdt.cross.arm.gnu.c.linker">
       </tool>
       <tool
             command="mips-sde-elf-g++"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.cpp.linker"
             isAbstract="false"
-            name="ARM Sourcery GCC C++ Linker"
+            name="MIPS Sourcery GCC C++ Linker"
             superClass="org.eclipse.cdt.cross.arm.gnu.cpp.linker">
       </tool>
       <tool
             command="mips-sde-elf-ar"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.archiver"
             isAbstract="false"
-            name="ARM Sourcery GCC Archiver"
+            name="MIPS Sourcery GCC Archiver"
             superClass="org.eclipse.cdt.cross.arm.gnu.archiver">
       </tool>
       <tool
@@ -2430,21 +2430,21 @@
             command="mips-sde-elf-objdump"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.createlisting"
             isAbstract="false"
-            name="ARM Sourcery GNU Create Listing"
+            name="MIPS Sourcery GNU Create Listing"
             superClass="org.eclipse.cdt.cross.arm.gnu.createlisting">
       </tool>
       <tool
             command="mips-sde-elf-size"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.printsize"
             isAbstract="false"
-            name="ARM Sourcery GNU Print Size"
+            name="MIPS Sourcery GNU Print Size"
             superClass="org.eclipse.cdt.cross.arm.gnu.printsize">
       </tool>
       <configuration
             cleanCommand="rm -rf"
             errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser"
             id="org.eclipse.cdt.cross.arm.gnu.configuration.base"
-            name="ARM GCC Configuration">
+            name="MIPS GCC Configuration">
       
          <enablement
                attribute="artifactExtension"
@@ -2460,7 +2460,7 @@
       <configuration
             cleanCommand="cs-rm -rf"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.configuration.base"
-            name="ARM Sourcery Windows GCC Configuration"
+            name="MIPS Sourcery Windows GCC Configuration"
             parent="org.eclipse.cdt.cross.arm.gnu.configuration.base">
          <enablement
                attribute="artifactExtension"
@@ -2476,7 +2476,7 @@
       <configuration
             cleanCommand="rm -rf"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.configuration.base"
-            name="ARM Sourcery Linux GCC Configuration"
+            name="MIPS Sourcery Linux GCC Configuration"
             parent="org.eclipse.cdt.cross.arm.gnu.configuration.base">
          <enablement
                attribute="artifactExtension"
@@ -2490,9 +2490,9 @@
          </enablement>
       </configuration>
       <configuration
-            cleanCommand="rm -rf"
+            cleanCommand="cs-rm -rf"
             id="org.eclipse.cdt.cross.arm.gnu.windows.configuration.base"
-            name="ARM Windows GCC Configuration"
+            name="MIPS Windows GCC Configuration"
             parent="org.eclipse.cdt.cross.arm.gnu.configuration.base">
          <enablement
                attribute="artifactExtension"
@@ -2508,7 +2508,7 @@
       <configuration
             cleanCommand="rm -rf"
             id="org.eclipse.cdt.cross.arm.gnu.linux.configuration.base"
-            name="ARM Linux GCC Configuration"
+            name="MIPS Linux GCC Configuration"
             parent="org.eclipse.cdt.cross.arm.gnu.configuration.base">
          <enablement
                attribute="artifactExtension"
@@ -2542,7 +2542,7 @@
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.builder.base"
                isAbstract="false"
                isVariableCaseSensitive="false"
-               name="ARM Sourcery Windows GNU Make builder"
+               name="MIPS Sourcery Windows GNU Make builder"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.builder">
          </builder>
          <optionCategory
@@ -2754,7 +2754,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf"
             isAbstract="true"
-            name="ARM Sourcery Windows GCC Application">
+            name="MIPS Sourcery Windows GCC Application">
          <configuration
                artifactExtension="elf"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -2890,7 +2890,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.staticLib"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.lib"
             isAbstract="true"
-            name="ARM Sourcery Windows GCC Static Library">
+            name="MIPS Sourcery Windows GCC Static Library">
          <configuration
                artifactExtension="a"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -3000,7 +3000,7 @@
                id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.builder.base"
                isAbstract="false"
                isVariableCaseSensitive="false"
-               name="ARM Sourcery Linux GNU Make builder"
+               name="MIPS Sourcery Linux GNU Make builder"
                superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.builder">
          </builder>
          <optionCategory
@@ -3220,7 +3220,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf"
             isAbstract="true"
-            name="ARM Sourcery Linux GCC Application">
+            name="MIPS Sourcery Linux GCC Application">
          <configuration
                artifactExtension="elf"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -3356,7 +3356,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.staticLib"
             id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.lib"
             isAbstract="true"
-            name="ARM Sourcery Linux GCC Static Library">
+            name="MIPS Sourcery Linux GCC Static Library">
          <configuration
                artifactExtension="a"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -3453,7 +3453,7 @@
                   id="org.eclipse.cdt.cross.arm.gnu.windows.toolchain.base"
                   isAbstract="false"
                   isToolChainSupported="org.eclipse.cdt.cross.arm.gnu.windows.IsToolChainSupported"
-                  name="ARM Windows GCC (GNUARM, WinARM, Yagarto)"
+                  name="MIPS Windows GCC (Sourcery G++ Lite)"
                   osList="win32">
          <targetPlatform
                archList="all"
@@ -3464,11 +3464,11 @@
                osList="win32">
          </targetPlatform>
          <builder
-               command="make"
+               command="cs-make"
                id="org.eclipse.cdt.cross.arm.gnu.windows.builder.base"
                isAbstract="false"
                isVariableCaseSensitive="false"
-               name="ARM Windows GNU Make builder"
+               name="MIPS Windows GNU Make builder"
                superClass="org.eclipse.cdt.cross.arm.gnu.builder">
          </builder>
          <optionCategory
@@ -3566,7 +3566,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.assembler.base"
                isAbstract="false"
-               name="ARM Windows GCC Assembler"
+               name="MIPS Windows GCC Assembler"
                superClass="org.eclipse.cdt.cross.arm.gnu.assembler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.windows.assembler.base.input"
@@ -3577,7 +3577,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.c.compiler.base"
                isAbstract="false"
-               name="ARM Windows GCC C Compiler"
+               name="MIPS Windows GCC C Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.windows.c.compiler.base.input"
@@ -3588,7 +3588,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.cpp.compiler.base"
                isAbstract="false"
-               name="ARM Windows GCC C++ Compiler"
+               name="MIPS Windows GCC C++ Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.cpp.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.windows.cpp.compiler.base.input"
@@ -3599,25 +3599,25 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.c.linker.base"
                isAbstract="false"
-               name="ARM Windows GCC C Linker"
+               name="MIPS Windows GCC C Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.c.linker">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.cpp.linker.base"
                isAbstract="false"
-               name="ARM Windows GCC C++ Linker"
+               name="MIPS Windows GCC C++ Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.cpp.linker">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.archiver.base"
                isAbstract="false"
-               name="ARM Windows GCC Archiver"
+               name="MIPS Windows GCC Archiver"
                superClass="org.eclipse.cdt.cross.arm.gnu.archiver">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.createflash.base"
                isAbstract="false"
-               name="ARM Windows GNU Create Flash Image"
+               name="MIPS Windows GNU Create Flash Image"
                superClass="org.eclipse.cdt.cross.arm.gnu.createflash">
             <enablement
                   type="ALL">
@@ -3637,7 +3637,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.createlisting.base"
                isAbstract="false"
-               name="ARM Windows GNU Create Listing"
+               name="MIPS Windows GNU Create Listing"
                superClass="org.eclipse.cdt.cross.arm.gnu.createlisting">
             <enablement
                   type="ALL">
@@ -3657,7 +3657,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.windows.printsize.base"
                isAbstract="false"
-               name="ARM Windows GNU Print Size"
+               name="MIPS Windows GNU Print Size"
                superClass="org.eclipse.cdt.cross.arm.gnu.printsize">
             <enablement
                   type="ALL">
@@ -3679,7 +3679,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application"
             id="org.eclipse.cdt.cross.arm.gnu.windows.elf"
             isAbstract="true"
-            name="ARM Windows GCC Application">
+            name="MIPS Windows GCC Application">
          <configuration
                artifactExtension="elf"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -3815,7 +3815,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.staticLib"
             id="org.eclipse.cdt.cross.arm.gnu.windows.lib"
             isAbstract="true"
-            name="ARM Windows GCC Static Library">
+            name="MIPS Windows GCC Static Library">
          <configuration
                artifactExtension="a"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -3911,7 +3911,7 @@
             id="org.eclipse.cdt.cross.arm.gnu.linux.toolchain.base"
             isAbstract="false"
             isToolChainSupported="org.eclipse.cdt.cross.arm.gnu.linux.IsToolChainSupported"
-            name="ARM Linux GCC (GNUARM)"
+            name="MIPS Linux GCC (Sourcery G++ Lite)"
             osList="linux">
          <targetPlatform
                archList="all"
@@ -3926,7 +3926,7 @@
                id="org.eclipse.cdt.cross.arm.gnu.linux.builder.base"
                isAbstract="false"
                isVariableCaseSensitive="false"
-               name="ARM Linux GNU Make builder"
+               name="MIPS Linux GNU Make builder"
                superClass="org.eclipse.cdt.cross.arm.gnu.builder">
          </builder>
          <optionCategory
@@ -4024,7 +4024,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.assembler.base"
                isAbstract="false"
-               name="ARM Linux GCC Assembler"
+               name="MIPS Linux GCC Assembler"
                superClass="org.eclipse.cdt.cross.arm.gnu.assembler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.linux.assembler.base.input"
@@ -4035,7 +4035,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.c.compiler.base"
                isAbstract="false"
-               name="ARM Linux GCC C Compiler"
+               name="MIPS Linux GCC C Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.linux.c.compiler.base.input"
@@ -4046,7 +4046,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.cpp.compiler.base"
                isAbstract="false"
-               name="ARM Linux GCC C++ Compiler"
+               name="MIPS Linux GCC C++ Compiler"
                superClass="org.eclipse.cdt.cross.arm.gnu.cpp.compiler">
             <inputType
                   id="org.eclipse.cdt.cross.arm.gnu.linux.cpp.compiler.base.input"
@@ -4057,25 +4057,25 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.c.linker.base"
                isAbstract="false"
-               name="ARM Linux GCC C Linker"
+               name="MIPS Linux GCC C Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.c.linker">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.cpp.linker.base"
                isAbstract="false"
-               name="ARM Linux GCC C++ Linker"
+               name="MIPS Linux GCC C++ Linker"
                superClass="org.eclipse.cdt.cross.arm.gnu.cpp.linker">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.archiver.base"
                isAbstract="false"
-               name="ARM Linux GCC Archiver"
+               name="MIPS Linux GCC Archiver"
                superClass="org.eclipse.cdt.cross.arm.gnu.archiver">
          </tool>
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.createflash.base"
                isAbstract="false"
-               name="ARM Linux GNU Create Flash Image"
+               name="MIPS Linux GNU Create Flash Image"
                superClass="org.eclipse.cdt.cross.arm.gnu.createflash">
             <enablement
                   type="ALL">
@@ -4095,7 +4095,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.createlisting.base"
                isAbstract="false"
-               name="ARM Linux GNU Create Listing"
+               name="MIPS Linux GNU Create Listing"
                superClass="org.eclipse.cdt.cross.arm.gnu.createlisting">
             <enablement
                   type="ALL">
@@ -4115,7 +4115,7 @@
          <tool
                id="org.eclipse.cdt.cross.arm.gnu.linux.printsize.base"
                isAbstract="false"
-               name="ARM Linux GNU Print Size"
+               name="MIPS Linux GNU Print Size"
                superClass="org.eclipse.cdt.cross.arm.gnu.printsize">
             <enablement
                   type="ALL">
@@ -4137,7 +4137,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application"
             id="org.eclipse.cdt.cross.arm.gnu.linux.elf"
             isAbstract="true"
-            name="ARM Linux GCC Application">
+            name="MIPS Linux GCC Application">
          <configuration
                artifactExtension="elf"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
@@ -4273,7 +4273,7 @@
             buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.staticLib"
             id="org.eclipse.cdt.cross.arm.gnu.linux.lib"
             isAbstract="true"
-            name="ARM Linux GCC Static Library">
+            name="MIPS Linux GCC Static Library">
          <configuration
                artifactExtension="a"
                buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
